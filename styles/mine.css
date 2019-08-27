@@ -1,0 +1,41 @@
+nav{
+    background-color:#F3B64A;
+}
+/*#ffcc33*/
+.navbar-brand{text-align: center;color: #000;}
+ul li a{color: #000;}
+.navbar-toggler{border-color: white;}
+a img{
+    width: 40px;
+    border-radius:20px;
+}
+ul li :hover{
+    background-color: #e9ecef;
+}
+/* ================== end nav STYLE ================== */
+body{
+    /*避免最上面部分被导航条遮住*/
+    padding-top: 70px;
+}
+/*让未登录注册那一行离导航栏远一点，不要太近*/
+.div01{
+    padding-top: 10px; ;
+}
+/*让头像右对齐*/
+#div01 .col-4{
+    text-align: right;
+}
+#div01 .col-8{
+    text-align: left;
+}
+#img02{
+    width: 80px;
+    height: 80px;
+}
+hr.divider{
+    margin: 10px 0;
+}
+
+#btn01{
+    margin: 90px 0;
+}
