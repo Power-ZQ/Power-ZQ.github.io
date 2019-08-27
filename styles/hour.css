@@ -1,0 +1,26 @@
+/* ================== begin nav STYLE ================== */
+nav{
+    background-color:#F3B64A;
+}
+/* ================== end nav STYLE ================== */
+body{
+    /*避免最上面部分被导航条遮住*/
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+#app button{
+    width: 26px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.box{
+    -webkit-box-shadow:0px 3px 3px #c8c8c8 ;
+    -moz-box-shadow:0px 3px 3px #c8c8c8 ;
+    box-shadow:0px 3px 3px #c8c8c8 ;
+}
+#btn01{
+    height: 25px;
+    width: 45px;
+    background-color: #00D7C6;
+    border: none;
+}

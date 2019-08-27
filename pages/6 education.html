@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <!--使ie浏览器正常浏览-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--实现响应式布局，用viewport获取设备宽度，再根据这个设置网页宽度，使width=device-width，initial-scale=1代表缩放比例是1-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="矿工">
+    <meta name="author" content="第十三组">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="../miner.jpg">
+    <title>矿工-教育经历</title>
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css"/>
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <style>
+        /* ================== begin nav STYLE ================== */
+        nav{
+            background-color:#F3B64A;
+        }
+        /* ================== end nav STYLE ================== */
+        body{
+            /*避免最上面部分被导航条遮住*/
+            padding-top: 70px;
+            padding-bottom: 40px;
+        }
+        .div03 img{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+<!--导航条-->
+<nav class="navbar navbar-expand-lg fixed-top ">
+    <div class="container">
+        <!--导航栏的返回按钮-->
+        <a class="return" href="4 online.html" >
+            <i class="fa fa-chevron-left" style="font-size: 100%;color: white"></i>
+        </a>
+        <ul class="navbar-nav ">
+            <li class="text-white">教育经历</li>
+        </ul>
+        <div></div>
+    </div>
+</nav>
+
+<div class="container div01"id="div01">
+
+    <!--学校名称-->
+    <div class="div02">
+        <div class="row">
+            <div class="col-10 text-left">
+                <i class="fa fa-pencil fa-lg"style="color:#ffcc33"></i>
+                学校名称
+            </div>
+            <div class="col-2 text-right">
+                    <!-- Button trigger modal -->
+                    <i class=" fa fa-angle-right" data-toggle="modal" data-target="#schoolName" style="font-size: 130%;position:relative;top: 1px;left: 1px;color: #686868"></i>
+                    <!--</button>-->
+            </div>
+        </div>
+        <hr class="divider"/>
+
+        <!--学历水平-->
+        <div class="row">
+            <div class="col-10 text-left">
+                <i class="fa fa-pencil fa-lg"style="color:#ffcc33"></i>
+                学历水平
+            </div>
+            <div class="col-2 text-right">
+                <!-- Button trigger modal -->
+                <i class=" fa fa-angle-right" data-toggle="modal" data-target="#education" style="font-size: 130%;position:relative;top: 1px;left: 1px;color: #686868"></i>
+                <!--</button>-->
+            </div>
+        </div>
+        <hr class="divider"/>
+
+        <!--专业名称-->
+        <div class="row">
+            <div class="col-10 text-left">
+                <i class="fa fa-pencil fa-lg"style="color:#ffcc33"></i>
+                专业名称
+            </div>
+            <div class="col-2 text-right">
+                <!-- Button trigger modal -->
+                <i class=" fa fa-angle-right" data-toggle="modal" data-target="#majorName" style="font-size: 130%;position:relative;top: 1px;left: 1px;color: #686868"></i>
+                <!--</button>-->
+            </div>
+        </div>
+        <hr class="divider"/>
+
+        <!--时间段-->
+        <div class="row">
+            <div class="col-10 text-left">
+                <i class="fa fa-pencil fa-lg"style="color:#ffcc33"></i>
+                时间段
+            </div>
+            <div class="col-2 text-right">
+                <i class="fa fa-angle-right" style="font-size: 130%;color: #686868"></i>
+            </div>
+        </div>
+        <hr class="divider"/>
+
+    </div>
+    </div>
+
+<!-- 学校名称Modal -->
+<div class="modal" id="schoolName" tabindex="-1" role="dialog" aria-labelledby="schoolNameLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!--弹出框标题-->
+            <div class="modal-header">
+                <h5 class="modal-title" id="schoolNameLabel">请输入学校名称</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <!--弹出框内容-->
+            <div class="modal-body">
+                <input class="form-control" type="text" placeholder="输入内容">
+            </div>
+            <!--弹出框页脚-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 学历水平Modal -->
+<div class="modal" id="education" tabindex="-1" role="dialog" aria-labelledby="educationLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="educationLabel">请选择学历水平</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="custom-control custom-radio" >
+                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" >
+                    <label class="custom-control-label" for="customRadio1">博士</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio2">硕士</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio3">本科</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio4">专科</label>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 专业名称Modal -->
+<div class="modal" id="majorName" tabindex="-1" role="dialog" aria-labelledby="majorNameLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!--弹出框标题-->
+            <div class="modal-header">
+                <h5 class="modal-title" id="majorNameLabel">请输入专业名称</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <!--弹出框内容-->
+            <div class="modal-body">
+                <input class="form-control" type="text" placeholder="输入内容">
+            </div>
+            <!--弹出框页脚-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vender/jquery-slim.min.js" rel="stylesheet" ></script>
+<script src="../assets/vender/popper.min.js" rel="stylesheet" ></script>
+<script src="../assets/js/bootstrap.min.js" rel="stylesheet"></script>
+
+
+</body>
+</html>

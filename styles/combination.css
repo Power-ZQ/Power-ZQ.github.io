@@ -1,0 +1,26 @@
+/* ================== begin nav STYLE ================== */
+nav{
+    background-color:#F3B64A;
+}
+/*#ffcc33*/
+.navbar-brand{text-align: center;color: #000;}
+ul li a{color: #000;}
+.navbar-toggler{border-color: white;}
+a img{
+    width: 40px;
+    border-radius:20px;
+}
+ul li :hover{
+    background-color: #e9ecef;
+}
+/* ================== end nav STYLE ================== */
+body{
+    /*避免最上面部分被导航条遮住*/
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+#img01{
+    width: 100%;
+    height: 100%;
+    shadow: 2px ;
+}

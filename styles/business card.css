@@ -1,0 +1,39 @@
+
+nav{
+    background-color:#F3B64A;
+}
+/* ================== end nav STYLE ================== */
+body{
+    /*避免最上面部分被导航条遮住*/
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+/*让未登录注册那一行离导航栏远一点，不要太近*/
+.div01{
+    padding-top: 10px;
+}
+/*让头像右对齐*/
+#div01 .col-3{
+    text-align: right;
+}
+#div01 .col-9{
+    text-align: left;
+}
+#img02{
+    width: 70px;
+    height: 70px;
+}
+hr.divider{
+    margin: 10px 0;
+}
+.div02{
+    font-family:黑体;
+    font-size: 17px;
+}
+.modal-body label{
+    text-align: left;
+}
+.inline-divider{
+    margin: 10px 0;
+    border: none;
+}

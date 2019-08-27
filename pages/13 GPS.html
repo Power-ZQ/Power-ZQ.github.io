@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="矿工">
+	<meta name="author" content="第十三组">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="icon" href="../miner.jpg">
+	<title>地址定位</title>
+
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css"/>
+	<!-- ================== END BASE CSS STYLE ================== -->
+
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6hf2VytFZj18MbQpkwIW2jI4jT9nRfbe"></script>
+
+	<style>
+		nav{
+			background-color:#F3B64A;
+		}
+		body{
+			padding-top: 70px;
+		}
+		#l-map{height:300px;width:100%;}
+		#r-result{width:100%;}
+	</style>
+</head>
+
+<body class="container">
+<!--导航条-->
+	<nav class="navbar navbar-expand-lg fixed-top ">
+		<div class="container">
+			<!--导航栏的返回按钮-->
+			<a class="return" href="12 location.html" >
+				<i class="fa fa-chevron-left" style="font-size: 100%;color: white"></i>
+			</a>
+			<ul class="navbar-nav ">
+				<li class="text-white">地址定位</li>
+			</ul>
+			<div></div>
+		</div>
+	</nav>
+	<!--页眉部分-->
+	<div id="r-result" class="input-group">
+		<input type="text" id="suggestId" class="form-control" value="百度" placeholder="请输入地址" >
+	</div>
+	<div id="searchResultPanel"   style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;" ></div>
+
+
+	<br/>
+
+	<div id="l-map"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div align="center">
+			<button class="btn btn-warning btn-block"onclick="window.location.href='12 location.html'">下一步</button>
+	</div>
+    <p class="fixed-bottom text-muted" style="display:block;text-align: center;">&copy; 2019 电子商务系项目制第十三组</p>
+
+
+
+	<script src="../assets/vender/jquery-slim.min.js" rel="stylesheet" ></script>
+	<script src="../assets/vender/popper.min.js" rel="stylesheet" ></script>
+	<script src="../assets/js/bootstrap.min.js" rel="stylesheet"></script>
+	<script src="../scripts/GPS.js"></script>
+
+</body>
+
+</html>
+
