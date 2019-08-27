@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <!--使ie浏览器正常浏览-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--实现响应式布局，用viewport获取设备宽度，再根据这个设置网页宽度，使width=device-width，initial-scale=1代表缩放比例是1-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="矿工">
+    <meta name="author" content="第十三组">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="../miner.jpg">
+    <title>矿工-拼兼职</title>
+    <!--link min代表引入一个压缩版样式，rel="stylesheet"代表引入外部样式表-->
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css"/>
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <style>
+        /* ================== begin nav STYLE ================== */
+        nav{
+            background-color:#F3B64A;
+        }
+        /*#ffcc33*/
+        .navbar-brand{text-align: center;color: #000;}
+        ul li a{color: #000;}
+        .navbar-toggler{border-color: white;}
+        a img{
+            width: 40px;
+            border-radius:20px;
+        }
+        ul li :hover{
+            background-color: #e9ecef;
+        }
+        /* ================== end nav STYLE ================== */
+        body{
+            /*避免最上面部分被导航条遮住*/
+            padding-top: 70px;
+            padding-bottom: 80px;
+        }
+        #img01{
+            width: 100%;
+            height: 100%;
+            shadow: 2px ;
+        }
+
+
+    </style>
+
+</head>
+<body class="container">
+<!--导航栏-->
+<nav class="navbar navbar-expand-lg fixed-top ">
+    <div class="container">
+        <a class="navbar-brand" href="#" ><img src="../miner.jpg" alt=""/></a>
+        <!-- 按钮边框 -->
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <!-- 方框里面三条线 -->
+            <div class="navbar-toggler-icon ">
+                <i class="fa fa-list-ul" style="font-size: 150%;"></i>
+            </div>
+        </button>
+        <!--导航条列表-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">我的</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">拼兼职</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">个人中心</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">消息</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">我要招聘</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">清除缓存</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">意见反馈</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <br/>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="搜索职位" aria-label="" aria-describedby="basic-addon1">
+        <div class="input-group-append">
+            <button class="btn btn-warning" type="button">搜索</button>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="position-relative">
+        <a href="searchforjob.html">
+            <img id="img01" src="../images/拼兼职01.jpg" class="img-rounded img-responsive center-block"  alt="01">
+        </a>
+    </div>
+
+    <br/>
+    <div>
+        <a href="searchforjob.html">
+            <img id="img01" src="../images/拼兼职02.jpg" class="img-rounded img-responsive center-block"  alt="02">
+        </a>
+    </div>
+</div>
+
+<script src="../assets/vender/jquery-slim.min.js" rel="stylesheet" ></script>
+<script src="../assets/vender/popper.min.js" rel="stylesheet" ></script>
+<script src="../assets/js/bootstrap.min.js" rel="stylesheet"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--使ie浏览器正常浏览-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--实现响应式布局，用viewport获取设备宽度，再根据这个设置网页宽度，使width=device-width，initial-scale=1代表缩放比例是1-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="矿工">
+	<meta name="author" content="第十三组">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="icon" href="../miner.jpg">
+	<title>地址定位</title>
+
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css"/>
+	<!-- ================== END BASE CSS STYLE ================== -->
+
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6hf2VytFZj18MbQpkwIW2jI4jT9nRfbe"></script>
+
+	<style>
+		nav{
+			background-color:#F3B64A;
+		}
+		body{
+			padding-top: 70px;
+		}
+		#l-map{height:300px;width:100%;}
+		#r-result{width:100%;}
+	</style>
+</head>
+
+<body class="container">
+<!--导航条-->
+	<nav class="navbar navbar-expand-lg fixed-top ">
+		<div class="container">
+			<!--导航栏的返回按钮-->
+			<a class="return" href="我的（登录后）.html" >
+				<i class="fa fa-chevron-left" style="font-size: 100%;color: white"></i>
+			</a>
+			<ul class="navbar-nav ">
+				<li class="text-white">地址定位</li>
+			</ul>
+			<div></div>
+		</div>
+	</nav>
+	<!--页眉部分-->
+	<div id="r-result" class="input-group">
+		<input type="text" id="suggestId" class="form-control" value="百度" placeholder="请输入地址" >
+	</div>
+	<div id="searchResultPanel"   style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;" ></div>
+
+
+	<br/>
+
+	<div id="l-map"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div align="center">
+		<a href="工作地点.html">
+			<button type="button" class="btn btn-warning btn-block">下一步</button>
+		</a>
+	</div>
+    <p class="fixed-bottom text-muted" style="display:block;text-align: center;">&copy; 2019 电子商务系项目制第十三组</p>
+
+
+
+	<script src="../assets/vender/jquery-slim.min.js" rel="stylesheet" ></script>
+	<script src="../assets/vender/popper.min.js" rel="stylesheet" ></script>
+	<script src="../assets/js/bootstrap.min.js" rel="stylesheet"></script>
+
+<script type="text/javascript">
+	// 百度地图API功能
+	function G(id) {
+		return document.getElementById(id);
+	}
+
+	var map = new BMap.Map("l-map");
+	map.centerAndZoom("徐州",12);                   // 初始化地图,设置城市和地图级别。
+	map.addControl(new BMap.NavigationControl());
+	map.addControl(new BMap.ScaleControl());
+	map.addControl(new BMap.OverviewMapControl());
+	map.addControl(new BMap.MapTypeControl());
+	map.enableScrollWheelZoom(true);
+
+	function myFun(result){                     //根据ip定位
+		var cityName = result.name;
+		map.setCenter(cityName);
+		alert("当前定位城市:"+cityName);
+	}
+	var myCity = new BMap.LocalCity();
+	myCity.get(myFun);
+
+
+	var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+			{"input" : "suggestId"
+				,"location" : map
+			});
+
+	ac.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+		var str = "";
+		var _value = e.fromitem.value;
+		var value = "";
+		if (e.fromitem.shouye > -1) {
+			value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		}
+		str = "FromItem<br />index = " + e.fromitem.shouye + "<br />value = " + value;
+
+		value = "";
+		if (e.toitem.shouye > -1) {
+			_value = e.toitem.value;
+			value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		}
+		str += "<br />ToItem<br />index = " + e.toitem.shouye + "<br />value = " + value;
+		G("searchResultPanel").innerHTML = str;
+	});
+
+	var myValue;
+	ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+		var _value = e.item.value;
+		myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.shouye + "<br />myValue = " + myValue;
+
+		setPlace();
+	});
+
+	function setPlace(){
+		map.clearOverlays();    //清除地图上所有覆盖物
+		function myFun(){
+			var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+			map.centerAndZoom(pp, 18);
+			map.addOverlay(new BMap.Marker(pp));    //添加标注
+		}
+		var local = new BMap.LocalSearch(map, { //智能搜索
+			onSearchComplete: myFun
+		});
+		local.search(myValue);
+	}
+</script>
+
+</body>
+
+</html>
+

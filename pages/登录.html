@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="cn">
+    <meta charset="utf-8">
+    <!--使ie浏览器正常浏览-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--实现响应式布局，用viewport获取设备宽度，再根据这个设置网页宽度，使width=device-width，initial-scale=1代表缩放比例是1-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="矿工">
+    <meta name="author" content="第十三组">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="../miner.jpg">
+    <title>矿工-登录</title>
+    <!--link min代表引入一个压缩版样式，rel="stylesheet"代表引入外部样式表-->
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css"/>
+    <!--<link rel="stylesheet" href="../styles/login.css"/>-->
+    <!-- ================== END BASE CSS STYLE ================== -->
+
+    <style>
+        html, body {
+            height: 90%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .form-signin {
+            width: 100%;
+            max-width: 420px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+
+        .form-signin .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style>
+</head>
+<body scroll="no" class="container text-center pace-top  pace-done">
+
+<form class="form-signin ">
+
+    <div class="align-content-xl-center">
+    <img class="LOGO" src="../images/logo.png" alt="logo" />
+    </div>
+    <div class="form-group">
+        <input type="text" v-model="userName" id="user" class="form-control form-control-lg form-group" placeholder="手机号（仅支持中国大陆）" required autofocus />
+    </div>
+    <div class=form-group">
+    <input type="password" v-model="password" id="password" class="form-control form-control-lg" placeholder="密码" required />
+    </div>
+
+    <div class="login-buttons">
+        <button type="submit" class="btn btn-lg btn-warning btn-block"  >登录</button>
+    </div>
+
+    <div class="row pb-20">
+        <div class="col text-left">
+            <a href="注册界面.html"><span class="once">立即注册</span></a>
+        </div>
+        <div class="col text-right">
+            <a href="#"><span class="forget">忘记密码</span></a>
+        </div>
+    </div>
+
+    <div class="row text-muted">
+        <span class="col px-0">—————</span>
+        <span class="col">使用第三方账号登录</span>
+        <span class="col px-0">—————</span>
+    </div>
+
+    <div>
+        <!-- Button trigger modal -->
+
+        <!--</button>-->
+        <a href="#" data-toggle="modal" data-target="#weChat" ><img src="../images/微信.png" alt="微信" class="pt-3"></a>
+    </div>
+
+    <p class="fixed-bottom text-muted">&copy; 2019 电子商务系项目制第十三组</p>
+</form>
+
+<!-- 微信弹窗 -->
+<div class="modal" id="weChat" tabindex="-1" role="dialog" aria-labelledby="weChatLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!--弹出框标题-->
+            <div class="modal-header">
+                <h5 class="modal-title" id="weChatLabel">微信登录</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <!--弹出框内容-->
+            <div class="modal-body">
+                <p >矿工申请获得以下权限：</p>
+                <p>获得您的公开信息（昵称、头像等）</p>
+            </div>
+            <!--弹出框页脚-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">允许</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">拒绝</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vender/jquery-slim.min.js" rel="stylesheet" ></script>
+<script src="../assets/vender/popper.min.js" rel="stylesheet" ></script>
+<script src="../assets/js/bootstrap.min.js" rel="stylesheet"></script>
+
+<!--[if lt IE 9]>
+<!--<script src="../assets/crossbrowserjs/html5shiv.js"></script>-->
+<!--<script src="../assets/crossbrowserjs/respond.min.js"></script>-->
+<!--<script src="../assets/crossbrowserjs/excanvas.min.js"></script>-->
+<![endif]-->
+
+</body>
+</html>
